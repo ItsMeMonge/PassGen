@@ -6,7 +6,7 @@ const includeLowercase = document.getElementById('include-lowercase');
 const includeUppercase = document.getElementById('include-uppercase');
 const includeNumbers = document.getElementById('include-numbers');
 const includeSpecial = document.getElementById('include-special');
-const specialCharCountInput = document.getElementById('special-char-count');
+const specialCharCountInput = document.getElementById('special-char-count-input');
 
 function generatePassword() {
     const length = parseInt(passwordLengthInput.value);
@@ -30,9 +30,6 @@ function generatePassword() {
         allChars += numberChars;
     }
 
-    if (includeSpecial.checked) {
-        allChars += specialChars;
-    }
 
     if (allChars.length === 0) {
         passwordInput.value = 'Selecione ao menos uma opção!';
@@ -44,6 +41,7 @@ function generatePassword() {
         for (let i = 0; i < specialCharCount; i++) {
             const randomIndex = Math.floor(Math.random() * specialChars.length);
             specialCharPart += specialChars[randomIndex];
+            console.log(specialCharPart)
         }
     }
     
@@ -80,15 +78,13 @@ numberInput.oninput = function() {
 }
 
 // Hidden
-const specialCharCount = document.getElementById("special-char-count-div");
+const specialCharCount = document.getElementById("special-char-count");
 function toggleSpecialCharCount(){
     includeSpecial.addEventListener("change", function() {
         if (includeSpecial.checked) {
-            console.log("NOT HIDDEN")
-            includeSpecial.classList.remove("hidden");
+            specialCharCount.classList.remove("hidden");
         } else {
-            console.log("not check")
-            includeSpecial.classList.add("hidden");
+            specialCharCount.classList.add("hidden");
         }
     });
 }

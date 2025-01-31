@@ -15,7 +15,7 @@
         <label for="password-length">Password Length:</label>
         <input type="number" id="password-length" value="18" min="8" max="50">
         <div class="slidecontainer">
-            <input type="range" min="1" max="50" value="18" class="slider" id="myRange">
+            <input type="range" min="8" max="50" value="18" class="slider" id="myRange">
           </div>
           
 
@@ -36,17 +36,17 @@
                 <input type="checkbox" id="include-special" onclick="toggleSpecialCharCount()" checked>
                 Include Special Characters
             </label>
-            <label for="special-char-count">Number of Special Characters:
-                <input class="hidden" type="number" id="special-char-count" value="2" min="0">
-            </label>
+            <p id="special-char-count">Number of Special Characters:
+                <input type="number" id="special-char-count-input" value="3" min="1">
+            </p>
         </div>
 
-        <button id="generate-btn">Generate Password</button>
-        
         <div class="result">
             <label for="password">Generated Password:</label>
             <input type="text" id="password" readonly>
         </div>
+
+        <button id="generate-btn">Generate Password</button>
     </div>
 
     <p>© 2025 The Monge's, All rights reserved </p>
@@ -55,7 +55,7 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
       particlesJS.load('particles-js', 'assets/particles.json', function() {
-        console.log('callback - particles.js config loaded');
+        console.log('CallBack - Particles.Js Config is loaded!');
       });
     </script>
 </body>
