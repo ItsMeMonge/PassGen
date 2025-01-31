@@ -2,7 +2,7 @@
 
 Welcome to **PassGen**, the sleek, simple, and secure password generator designed with **usability** and **efficiency** in mind. With a focus on minimalism, PassGen helps you create strong, random passwords effortlessly, all while offering a **clean design** that fits seamlessly into your workflow.
 
-[Access Now! In https://passgen.themonge.com/](https://passgen.themonge.com/)
+Access Now! In [https://passgen.themonge.com/](https://passgen.themonge.com/)
 
 ## Features
 
