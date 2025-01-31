@@ -22,9 +22,12 @@ The **PassGen** interface is built with **visual identity** in mind, combining s
 
 ## Get in Touch
 
-Follow me on Twitter for updates, tips, and more:
+Stay updated and connect with me for tips, updates, and more:
 
-[Twitter: @monge_ai](https://twitter.com/monge_ai)
+- Follow me on Twitter: [@monge_ai](https://twitter.com/monge_ai)
+- Reach out through my website: [Contact Me](https://themonge.com/contact-us)
+
+I'm always open to feedback and excited to hear from you!
 
 ## How to Use
 
