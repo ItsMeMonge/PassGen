@@ -35,57 +35,76 @@ body {
 
 
 .container {
-    background-color: #03002f18;
-    border: 2px solid rgba(255, 255, 255, 0.068);
-    backdrop-filter: blur(5px);
-    padding: 30px;
-    border-radius: 8px;
+    background-color: rgba(3, 0, 47, 0.09);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    padding: clamp(20px, 5vw, 40px);
+    border-radius: 12px;
     text-align: center;
-    margin: clamp(20px, 5vw, 70px) 0;
-    padding: 0 clamp(10px, 3vw, 20px);
-    box-shadow: 0 4px 8px rgb(255 255 255 / 23%);
-    text-align: center;
+    margin: clamp(20px, 2vw, 70px) 0;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.18);
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: translateY(-5px);
 }
 
 h1 {
-    font-size: clamp(28px, 6vw, 48px);
-    font-weight: 800;
+    font-size: clamp(28px, 6vw, 50px);
+    font-weight: 700;
     color: var(--primary-color);
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    text-shadow: 0 3px 18px rgba(0, 0, 0, 0.8);
-    transition: var(--transition);
+    margin-top: 1.5vh;
+    text-shadow: 0 5px 15px rgba(175, 122, 51, 0.5);
     background: linear-gradient(45deg, #ff4d07, #ffee00);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease;
+}
+
+h1:hover {
+    text-shadow: 0 10px 20px rgba(175, 122, 51, 0.7);
 }
 
 label {
-    font-size: 16px;
+    font-size: 1rem;
     display: block;
     margin-bottom: 8px;
     text-align: left;
+    color: #fff;
 }
 
 input[type="number"], input[type="text"] {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 20px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+    background: rgba(219, 219, 210, 0.5);
+
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.18);
     font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus, input[type="text"]:focus {
+    border-color: #c5fd2ca6;
+    outline: none;
 }
 
 button {
     padding: 12px 24px;
     background-color: #4CAF50;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -99,9 +118,46 @@ button:hover {
 
 .result input {
     font-weight: bold;
-    background-color: #f0f0f0;
+    background: #d3d3d344;
     color: #333;
     cursor: text;
+}
+
+.slidecontainer {
+    width: 100%;
+  }
+  
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  border-radius: 4px;
+  background: #d3d3d344;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 4px;
+  width: 25px;
+  height: 25px;
+  background: rgb(201, 204, 3);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
 }
 
 #particles-js {
@@ -112,4 +168,8 @@ button:hover {
     height: 100%;
     z-index: 0;
     background: transparent;
-  }
+}
+
+.hidden {
+    display: none;
+}

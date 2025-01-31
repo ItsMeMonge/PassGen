@@ -3,46 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerador de Senhas Fortes</title>
+    <title>PassGen</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <div id="particles-js"></div>
-    <h1>Gerador de Senha Forte</h1>
+    <h1>PassGen</h1>
 
     <div class="container">
         
-        <label for="password-length">Comprimento da Senha:</label>
-        <input type="number" id="password-length" value="18" min="8" max="32">
+        <label for="password-length">Password Length:</label>
+        <input type="number" id="password-length" value="18" min="8" max="50">
+        <div class="slidecontainer">
+            <input type="range" min="1" max="50" value="18" class="slider" id="myRange">
+          </div>
+          
 
         <div class="options">
             <label>
                 <input type="checkbox" id="include-lowercase" checked>
-                Incluir Letras Minúsculas
+                Include Lowercase Letters
             </label>
             <label>
                 <input type="checkbox" id="include-uppercase" checked>
-                Incluir Letras Maiúsculas
+                Include Capital Letters
             </label>
             <label>
                 <input type="checkbox" id="include-numbers" checked>
-                Incluir Números
+                Include Numbers
             </label>
             <label>
-                <input type="checkbox" id="include-special" checked>
-                Incluir Caracteres Especiais
+                <input type="checkbox" id="include-special" onclick="toggleSpecialCharCount()" checked>
+                Include Special Characters
             </label>
-            <label for="special-char-count">Quantidade de Caracteres Especiais:</label>
-            <input type="number" id="special-char-count" value="2" min="0">
+            <label for="special-char-count">Number of Special Characters:
+                <input class="hidden" type="number" id="special-char-count" value="2" min="0">
+            </label>
         </div>
 
-        <button id="generate-btn">Gerar Senha</button>
+        <button id="generate-btn">Generate Password</button>
         
         <div class="result">
-            <label for="password">Senha Gerada:</label>
+            <label for="password">Generated Password:</label>
             <input type="text" id="password" readonly>
         </div>
     </div>
+
+    <p>© 2025 The Monge's, All rights reserved </p>
 
     <script src="/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>

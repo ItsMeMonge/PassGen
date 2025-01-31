@@ -61,9 +61,34 @@ function shuffleString(str) {
     const arr = str.split('');
     for (let i = arr.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]]; // Troca os elementos
+        [arr[i], arr[j]] = [arr[j], arr[i]]; 
     }
     return arr.join('');
 }
 
 generateBtn.addEventListener('click', generatePassword);
+
+// Slider
+const slider = document.getElementById("myRange");
+const numberInput = document.getElementById("password-length")
+
+slider.oninput = function() {
+    numberInput.value = slider.value;
+}
+numberInput.oninput = function() {
+    slider.value = numberInput.value;
+}
+
+// Hidden
+const specialCharCount = document.getElementById("special-char-count-div");
+function toggleSpecialCharCount(){
+    includeSpecial.addEventListener("change", function() {
+        if (includeSpecial.checked) {
+            console.log("NOT HIDDEN")
+            includeSpecial.classList.remove("hidden");
+        } else {
+            console.log("not check")
+            includeSpecial.classList.add("hidden");
+        }
+    });
+}
