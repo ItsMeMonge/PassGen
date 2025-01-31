@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas Fortes</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <h1>Gerador de Senha Forte</h1>
+
+    <div class="container">
+        
+        <label for="password-length">Comprimento da Senha:</label>
+        <input type="number" id="password-length" value="18" min="8" max="32">
+
+        <div class="options">
+            <label>
+                <input type="checkbox" id="include-lowercase" checked>
+                Incluir Letras Minúsculas
+            </label>
+            <label>
+                <input type="checkbox" id="include-uppercase" checked>
+                Incluir Letras Maiúsculas
+            </label>
+            <label>
+                <input type="checkbox" id="include-numbers" checked>
+                Incluir Números
+            </label>
+            <label>
+                <input type="checkbox" id="include-special" checked>
+                Incluir Caracteres Especiais
+            </label>
+            <label for="special-char-count">Quantidade de Caracteres Especiais:</label>
+            <input type="number" id="special-char-count" value="2" min="0">
+        </div>
+
+        <button id="generate-btn">Gerar Senha</button>
+        
+        <div class="result">
+            <label for="password">Senha Gerada:</label>
+            <input type="text" id="password" readonly>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS.load('particles-js', 'assets/particles.json', function() {
+        console.log('callback - particles.js config loaded');
+      });
+    </script>
+</body>
+</html>

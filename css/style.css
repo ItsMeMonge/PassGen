@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
+
+/* Reset e estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+  --primary-color: #0793bd;
+  --secondary-color: #1e90ff;
+  --bg-color: #090909;
+  --text-color: #f0f0f0;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --focus-outline-color: #2196f3;
+  --hover-bg-color: #0288d1;
+  --button-active-color: #0277bd;
+}
+
+body {
+  background: linear-gradient(50deg, #bcbf39, #531b00);
+  color: var(--text-color);
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(14px, 2vw, 16px);
+  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+
+.container {
+    background-color: #03002f18;
+    border: 2px solid rgba(255, 255, 255, 0.068);
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    margin: clamp(20px, 5vw, 70px) 0;
+    padding: 0 clamp(10px, 3vw, 20px);
+    box-shadow: 0 4px 8px rgb(255 255 255 / 23%);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    font-size: clamp(28px, 6vw, 48px);
+    font-weight: 800;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-shadow: 0 3px 18px rgba(0, 0, 0, 0.8);
+    transition: var(--transition);
+    background: linear-gradient(45deg, #ff4d07, #ffee00);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+input[type="number"], input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.options label {
+    display: block;
+    margin: 8px 0;
+}
+
+.result input {
+    font-weight: bold;
+    background-color: #f0f0f0;
+    color: #333;
+    cursor: text;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: transparent;
+  }
